@@ -38,12 +38,6 @@ To run the Harry Potter demo application locally, follow these steps:
 
 3. Build and run the application on an emulator or a connected device.
 
-## Contributing
-
-Contributions to the Harry Potter demo application are welcome and encouraged! If you have any bug reports, feature requests, or suggestions, please open an issue on the project's GitHub repository. Additionally, feel free to submit pull requests with improvements or fixes.
-
-Before contributing, please review the [Contribution Guidelines](CONTRIBUTING.md) for more information.
-
 ## Acknowledgements
 
 The Harry Potter demo application was created with inspiration from the Harry Potter API (https://www.potterapi.com/). We would like to acknowledge the creators of the API for their valuable data and resources.
