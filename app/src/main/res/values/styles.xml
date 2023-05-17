@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="TextTitleBold">
+        <item name="android:textSize">21sp</item>
+        <item name="android:fontFamily">@font/lobster_two_bold</item>
+        <item name="android:padding">@dimen/space_8</item>
+        <item name="android:textColor">@color/text_black</item>
+
+    </style>
+
+    <style name="SearchBoxStyle" >
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/ibm_sans_regular</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="TextSubtitle" >
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">@dimen/space_8</item>
+        <item name="android:fontFamily">@font/lobster_two_bold</item>
+        <item name="android:textColor">@color/grey_text_color</item>
+    </style>
+
+    <style name="TextStyleDetails">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/ibm_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/space_8</item>
+        <item name="android:textColor">@color/colorGoldDark</item>
+    </style>
+
+    <style name="TextSubtitleDetails">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/ibm_sans_medium</item>
+        <item name="android:padding">@dimen/space_8</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+
+
+</resources>

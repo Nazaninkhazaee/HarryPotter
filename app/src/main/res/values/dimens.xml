@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_image_size_small">90dp</dimen>
+    <dimen name="card_image_size_large">170dp</dimen>
+
+    <dimen name="search_box_hight">42dp</dimen>
+
+    <dimen name="small_padding">4dp</dimen>
+    <dimen name="mid_padding">16dp</dimen>
+    <dimen name="large_padding">21dp</dimen>
+    <dimen name="small_text_size">11sp</dimen>
+    <dimen name="mid_text_size">13sp</dimen>
+    <dimen name="large_text_size">39sp</dimen>
+    <dimen name="title_text_size">21sp</dimen>
+    <dimen name="main_text_size">20sp</dimen>
+    <dimen name="icon_size">68dp</dimen>
+    <dimen name="check_box_size">21dp</dimen>
+
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_18">18dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_32">32dp</dimen>
+
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_22">22sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+
+    <dimen name="character_card_corner_radius">8dp</dimen>
+    <dimen name="character_card_elevation">0dp</dimen>
+    <dimen name="card_image_size_big">150dp</dimen>
+
+
+    <dimen name="character_list_margin_horizontal">16dp</dimen>
+    <dimen name="character_list_margin_bottom">16dp</dimen>
+    <dimen name="character_list_padding_bottom">64dp</dimen>
+    <dimen name="character_list_padding_top">24dp</dimen>
+
+    <dimen name="search_view_corner_radius">24dp</dimen>
+
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HarryPotter</string>
+    <string name="yes">Yes</string>
+    <string name="name">Name</string>
+    <string name="house">House</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="show_all">Show all</string>
+    <string name="students">Students</string>
+    <string name="staff"> Teachers</string>
+    <string name="search">Search</string>
+    <string name="characters">Characters</string>
+    <string name="wizard">Wizard</string>
+    <string name="no">No</string>
+    <string name="character">Character</string>
+    <string name="gender">Gender</string>
+    <string name="alive">Alive</string>
+    <string name="species">Species</string>
+    <string name="hogwarts">Hogwarts</string>
+    <string name="patronus">Patronus</string>
+</resources>

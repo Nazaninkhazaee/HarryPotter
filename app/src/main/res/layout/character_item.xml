@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="character"
+            type="com.nazanin.harrypotter.domin.CharacterModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_gravity="start"
+        android:layout_margin="@dimen/small_padding"
+        app:cardCornerRadius="@dimen/character_card_corner_radius"
+        app:cardElevation="@dimen/character_card_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/border_line"
+            android:padding="@dimen/space_8">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/character_iv"
+                android:layout_width="@dimen/card_image_size_small"
+                android:layout_height="@dimen/card_image_size_small"
+                android:scaleType="centerCrop"
+                app:setImageUrl="@{character.image}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_tv"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                app:layout_constraintBottom_toTopOf="@+id/wizard_tv"
+                tools:src="@tools:sample/avatars" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_tv"
+                style="@style/TextTitleBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@{character.name}"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Harry Potter" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/wizard_tv"
+                style="@style/TextSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                isWizard="@{character.wizard}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Wizard" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.nazanin.harrypotter.viewmodels.OverviewViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_dark_background"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/toolbar_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:lineSpacingExtra="5sp"
+                android:text="@string/app_name"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/more_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_more" />
+
+            <ImageView
+                android:id="@+id/search_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_search" />
+
+<!--            <EditText-->
+<!--                android:id="@+id/search_et"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/white"-->
+<!--                android:hint="@string/search"-->
+<!--                android:visibility="gone"-->
+<!--                android:textColorHint="@color/silver"-->
+<!--                style="@style/TextSubtitle"-->
+<!--                android:padding="@dimen/space_8" />-->
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_height="@dimen/search_box_hight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <EditText
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:background="@drawable/border_line"
+                android:textColorHint="@color/silver"
+                style="@style/SearchBoxStyle"
+                android:padding="@dimen/space_8"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/space_18"
+                android:layout_marginEnd="@dimen/space_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:autofillHints="name" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextTitleBold"
+                android:text="@string/characters"
+                android:paddingStart="@dimen/space_16"
+                android:paddingEnd="@dimen/space_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:goneIfNotNull="@{viewModel.characterModel}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/character_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="6dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:listData="@{viewModel.characterModel}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_layout"
+            app:spanCount="2"
+            android:clipToPadding="false"
+            tools:itemCount="16"
+            tools:listitem="@layout/character_item"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
