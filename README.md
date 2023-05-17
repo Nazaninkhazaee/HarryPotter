@@ -50,7 +50,7 @@ The Harry Potter demo application was created with inspiration from the Harry Po
 
 ## Contact
 
-For any inquiries or questions regarding the Harry Potter demo application, please reach out to [your-email@example.com](mailto:your-email@example.com).
+For any inquiries or questions regarding the Harry Potter demo application, please reach out to nazanin.mahdavi.khazaei@gmail.com.
 
 
 
